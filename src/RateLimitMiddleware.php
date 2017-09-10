@@ -9,20 +9,25 @@ use Psr\Http\Message\ResponseInterface;
 final class RateLimitMiddleware implements MiddlewareInterface
 {
     /**
-     * Extractor for obtaining a client from the incoming HTTP request
-     *
      * @var ClientExtractorInterface
      */
     private $extractor;
 
     /**
+     * @var LimitedResponseFactoryInterface
+     */
+    private $responseFactory;
+
+    /**
      * Create a new instance of the middleware.
      *
-     * @param ClientExtractorInterface $extractor Obtains the client from the HTTP request.
+     * @param ClientExtractorInterface        $extractor       Obtains the client from the HTTP request.
+     * @param LimitedResponseFactoryInterface $responseFactory Factory object for creating 429 responses.
      */
-    public function __construct(ClientExtractorInterface $extractor)
+    public function __construct(ClientExtractorInterface $extractor, LimitedResponseFactoryInterface $responseFactory)
     {
         $this->extractor = $extractor;
+        $this->responseFactory = $responseFactory;
     }
 
     /**
@@ -38,7 +43,7 @@ final class RateLimitMiddleware implements MiddlewareInterface
     {
         $client = $this->clientExtractor->extract($request);
         if (!$client->canMakeRequest($request)) {
-            return $response->withStatusCode(429);
+            return $this->responseFactory->createResponse($client);
         }
 
         return $next($request, $response);
