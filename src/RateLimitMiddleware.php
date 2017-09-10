@@ -14,7 +14,7 @@ final class RateLimitMiddleware implements MiddlewareInterface
     /**
      * @var ClientExtractorInterface
      */
-    private $extractor;
+    private $clientExtractor;
 
     /**
      * @var LimitedResponseFactoryInterface
@@ -31,7 +31,7 @@ final class RateLimitMiddleware implements MiddlewareInterface
         ClientExtractorInterface $clientExtractor,
         LimitedResponseFactoryInterface $responseFactory
     ) {
-        $this->clientExtractor = $extractor;
+        $this->clientExtractor = $clientExtractor;
         $this->responseFactory = $responseFactory;
     }
 
