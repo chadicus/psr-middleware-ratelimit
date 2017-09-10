@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7be6ec2f1aa22d531e20e12d46ac3c35",
+    "content-hash": "d45938b41fdb88a89ccc7b5b79031325",
     "packages": [
         {
             "name": "chadicus/psr-middleware",
@@ -2385,7 +2385,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.0"
+        "php": ">=7.0"
     },
     "platform-dev": []
 }
