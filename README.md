@@ -43,3 +43,6 @@ With a checkout of the code get [Composer](http://getcomposer.org) in your PATH 
 ./composer install
 ./vendor/bin/phpunit
 ```
+## Example Usage
+
+Examples coming soon
