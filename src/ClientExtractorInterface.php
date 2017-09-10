@@ -16,5 +16,5 @@ interface ClientExtractorInterface
      *
      * @return LimitedClientInterface
      */
-    public function extract(RequestInterface $request) : LimitedClientInterface;
+    public function extract(ServerRequestInterface $request) : LimitedClientInterface;
 }
