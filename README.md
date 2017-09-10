@@ -3,8 +3,6 @@
 [![Build Status](https://travis-ci.org/chadicus/psr-middleware-ratelimit.svg?branch=master)](https://travis-ci.org/chadicus/psr-middleware-ratelimit)
 [![Code Quality](https://scrutinizer-ci.com/g/chadicus/psr-middleware-ratelimit/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/chadicus/psr-middleware-ratelimit/?branch=master)
 [![Code Coverage](https://coveralls.io/repos/github/chadicus/psr-middleware-ratelimit/badge.svg?branch=master)](https://coveralls.io/github/chadicus/psr-middleware-ratelimit?branch=master)
-[![Dependency Status](https://www.versioneye.com/user/projects/55b9075e653762001a0012b3/badge.svg?style=flat)](https://www.versioneye.com/user/projects/55b9075e653762001a0012b3)
-[![Reference Status](https://www.versioneye.com/php/chadicus:psr-middleware-ratelimit/reference_badge.svg?style=flat)](https://www.versioneye.com/php/chadicus:psr-middleware-ratelimit/references)
 
 [![Latest Stable Version](https://poser.pugx.org/chadicus/psr-middleware-ratelimit/v/stable)](https://packagist.org/packages/chadicus/psr-middleware-ratelimit)
 [![Latest Unstable Version](https://poser.pugx.org/chadicus/psr-middleware-ratelimit/v/unstable)](https://packagist.org/packages/chadicus/psr-middleware-ratelimit)
