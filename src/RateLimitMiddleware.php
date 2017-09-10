@@ -6,6 +6,9 @@ use Chadicus\Psr\Middleware\MiddlewareInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
+/**
+ * Middleware for limiting client requests.
+ */
 final class RateLimitMiddleware implements MiddlewareInterface
 {
     /**
@@ -21,12 +24,14 @@ final class RateLimitMiddleware implements MiddlewareInterface
     /**
      * Create a new instance of the middleware.
      *
-     * @param ClientExtractorInterface        $extractor       Obtains the client from the HTTP request.
+     * @param ClientExtractorInterface        $clientExtractor Obtains the client from the HTTP request.
      * @param LimitedResponseFactoryInterface $responseFactory Factory object for creating 429 responses.
      */
-    public function __construct(ClientExtractorInterface $extractor, LimitedResponseFactoryInterface $responseFactory)
-    {
-        $this->extractor = $extractor;
+    public function __construct(
+        ClientExtractorInterface $clientExtractor,
+        LimitedResponseFactoryInterface $responseFactory
+    ) {
+        $this->clientExtractor = $extractor;
         $this->responseFactory = $responseFactory;
     }
 
